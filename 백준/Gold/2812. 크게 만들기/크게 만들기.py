@@ -12,8 +12,8 @@ for i in num :
         K -= 1
     stack.append(i) 
 
-if K > 0 :                                      #만약 숫자를 덜 지웠다면
-    print(''.join(stack[:N-K]))                 #뒤의 숫자를 남은 k개 만큼 지우고 출력
+if K > 0 :                                      #만약 숫자를 덜 지웠다면 (숫자가 내림차순으로 주어진경우 ex:654321)
+    print(''.join(stack[:N-K]))                 #뒤의 숫자를 남은 k개 만큼 지우고 출력 (하나도 못지우고 k=3인채로 내려올 테니까 K만큼 지우고 654출력)
 else :
     print(''.join(map(str,stack)))
     
