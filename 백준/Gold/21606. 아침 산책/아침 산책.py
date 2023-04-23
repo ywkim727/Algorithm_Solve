@@ -26,7 +26,7 @@ for _ in range(N-1) :
     adj[e].append(s)
     if node[s] == 1 and node[e] == 1 :                      #둘 다 실내 노드이면 경우의 수 +2 (서로 방문하는 케이스가 2가지니까)
         ans += 2
-                                                            #실내노드의 갯수
+                                                            
 sum = 0
 
 for i in range(1, N+1) :
