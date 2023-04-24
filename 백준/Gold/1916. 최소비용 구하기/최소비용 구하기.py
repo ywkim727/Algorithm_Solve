@@ -9,7 +9,7 @@ def dijkstra(start, end) :
 
     while heap :
         weight, index = heappop(heap)
-        if distance[index] < weight :
+        if distance[index] < weight :   #큐에서 뽑아낸 거리가 이미 갱신된 거리보다 클 경우(=방문함 셈) 무시
             continue
         for e, c in bus[index] :
             if distance[e] > weight + c :
