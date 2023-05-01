@@ -1,12 +1,12 @@
 # 1. 회의 시작 시간으로 오름차순 
 # 2. 1 의 결과에서 끝나는 시간으로 다시 오름차순
-
-N = int(input())
+import sys
+N = int(sys.stdin.readline())
 
 time = []
 
 for _ in range(N) :
-    start, end = map(int, input().split())
+    start, end = map(int, sys.stdin.readline().split())
     time.append((start, end))
 
 time.sort(key=lambda x : x[0])
