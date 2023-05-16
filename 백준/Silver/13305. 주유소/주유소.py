@@ -2,17 +2,14 @@ N = int(input())
 
 roads = list(map(int, input().split()))
 price = list(map(int, input().split()))
-cost = price[0] * roads[0]
-d = 0
-m = price[0]
+
+min_cost = price[0] * roads[0]
+
+min_price = price[0]
 for i in range(1, N-1) :
-    if price[i] < m :
-        cost += m * d
-        d = roads[i]
-        m = price[i]
-    else :
-        d += roads[i]
-    if i == N-2 :
-        cost += m * d
+    if min_price > price[i] :
+        min_price = price[i]
+
+    min_cost += min_price * roads[i]
     
-print(cost)
+print(min_cost)
